@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - 11434:3000
+    volumes:
+      - ./ollama/models:/ollama/models
+    environment:
+      - OLLAMA_MODELS=/ollama/models
